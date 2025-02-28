@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --foreground: #0a0723;
+    --background: #f8faf9;
+    --primary: #2f6a62;
+    --border: #eaecee;
+    --placeholder: #6a6f7c;
+
+    --destructive: #ef372b;
+  }
+
+  body {
+    @apply font-poppins bg-background subpixel-antialiased;
+  }
+
+  button {
+    @apply hover:cursor-pointer;
+  }
+
+  label {
+    @apply text-foreground;
+  }
+
+  input {
+    @apply placeholder:text-placeholder;
+
+    @variant focus {
+      @apply outline-none;
+    }
+  }
+}
+
+@theme {
+  --font-poppins: Poppins, sans-serif;
+
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --color-primary: var(--primary);
+
+  --color-border: var(--border);
+  --color-placeholder: var(--placeholder);
+  --color-destructive: var(--destructive);
+}
+
+@layer components {
+  .button {
+    @apply truncate rounded-full px-6 py-3 text-base font-semibold;
+
+    &.button-primary {
+      @apply bg-primary text-white;
+
+      @variant hover {
+        @apply ring-primary/50 ring-2 transition-all duration-150 ease-linear;
+      }
+    }
+
+    &.button-outline {
+      @apply border-border border;
+
+      @variant hover {
+        @apply ring-border/50 ring-2 transition-all duration-150 ease-linear;
+      }
+    }
+
+    &.button-sm {
+      @apply px-2.5 py-1.5 text-sm;
+    }
+
+    &.button-destructive {
+      @apply text-destructive bg-destructive/10;
+    }
+  }
+
+  .separator {
+    @apply bg-border;
+
+    &.separator-vertical {
+      @apply h-[50px] w-px;
+    }
+  }
+
+  .card {
+    @apply border-border h-fit w-fit rounded-2xl border bg-white p-5;
+  }
+
+  .input-container {
+    @apply space-y-2;
+
+    > .label {
+      @apply block;
+    }
+
+    > .input-wrapper {
+      @apply border-border ring-primary/50 [&_svg]:stroke-foreground flex w-full items-center gap-2 rounded-full border px-4 transition-all duration-150 ease-linear [&:has(:focus-visible)]:ring-2 [&:has(:invalid)]:ring-rose-400 [&:has(:invalid)]:outline-2 [&:has(:invalid)]:outline-rose-400;
+
+      > .input {
+        @apply h-13 flex-1 font-semibold placeholder:font-normal invalid:text-rose-500;
+      }
+    }
+  }
+}

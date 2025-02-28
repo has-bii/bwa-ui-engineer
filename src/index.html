@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body class="h-dvh w-full max-w-screen">
+    <header class="border-border flex h-[90px] w-full border-b bg-white py-4">
+      <nav class="container mx-auto my-auto flex items-center justify-between">
+        <a href="#" class="shrink-0">
+          <img alt="logo" src="./assets/logo.png" />
+        </a>
+
+        <ul class="inline-flex items-center gap-8">
+          <li><a href="#" class="font-semibold">Home</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Testimonials</a></li>
+        </ul>
+
+        <section class="flex h-fit w-fit flex-row items-center gap-6">
+          <button>
+            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 12.2v1.7c0 3.15-1.8 4.5-4.5 4.5h-9c-2.7 0-4.5-1.35-4.5-4.5V8.5C2 5.35 3.8 4 6.5 4h2.7c-.13.38-.2.8-.2 1.25v3.9c0 .97.32 1.79.89 2.36.57.57 1.39.89 2.36.89v1.39c0 .51.58.82 1.01.54l2.89-1.93h2.6c.45 0 .87-.07 1.25-.2z"
+                stroke="#0A0723"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M22 5.25v3.9c0 1.49-.76 2.61-2 3.05-.38.13-.8.2-1.25.2h-2.6l-2.89 1.93c-.43.28-1.01-.03-1.01-.54V12.4c-.97 0-1.79-.32-2.36-.89-.57-.57-.89-1.39-.89-2.36v-3.9c0-.45.07-.87.2-1.25.44-1.24 1.56-2 3.05-2h6.5C20.7 2 22 3.3 22 5.25zM7.4 22h7.2M11 18.4V22"
+                stroke="#0A0723"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.495 7.25h.01M15.696 7.25h.009M12.895 7.25h.01"
+                stroke="#0A0723"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="separator separator-vertical"></div>
+          <button class="button button-outline">Sign Up</button>
+          <button class="button button-primary">My Account</button>
+        </section>
+      </nav>
+    </header>
+    <main class="grid h-[calc(100%_-_90px)] grid-cols-2">
+      <section class="card w-full max-w-xl space-y-4 place-self-center">
+        <header>
+          <h1 class="text-2xl font-bold">Upgrade Your Skills</h1>
+        </header>
+        <form id="form" class="flex flex-col gap-4">
+          <!-- Image -->
+          <div
+            id="upload-file-button"
+            class="border-border flex aspect-square w-20 items-center justify-center rounded-full border p-4 text-center text-sm leading-tight font-semibold hover:cursor-pointer"
+          >
+            Add<br />Photo
+          </div>
+          <input id="input-file" type="file" class="hidden" accept="image/*" />
+          <!-- Fullname -->
+          <div class="input-container">
+            <label for="name" class="label">Complete Name</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.133 9.058a1.516 1.516 0 00-.275 0A3.683 3.683 0 016.3 5.367c0-2.042 1.65-3.7 3.7-3.7a3.696 3.696 0 01.133 7.392zM5.967 12.133c-2.017 1.35-2.017 3.55 0 4.892 2.291 1.533 6.05 1.533 8.341 0 2.017-1.35 2.017-3.55 0-4.892-2.283-1.525-6.041-1.525-8.341 0z"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                name="name"
+                id="name"
+                placeholder="Type your full name"
+                class="input"
+                type="text"
+              />
+            </div>
+          </div>
+          <!-- Occupation -->
+          <div class="input-container">
+            <label for="occupation" class="label">Occupation</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.667 18.333h6.666c3.35 0 3.95-1.341 4.125-2.975l.625-6.666C18.308 6.658 17.725 5 14.167 5H5.833C2.275 5 1.692 6.658 1.917 8.692l.625 6.666c.175 1.634.775 2.975 4.125 2.975zM6.667 5v-.667c0-1.475 0-2.666 2.666-2.666h1.334c2.666 0 2.666 1.191 2.666 2.666V5"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.667 10.833v.85c0 .909-.009 1.65-1.667 1.65-1.65 0-1.667-.733-1.667-1.641v-.859c0-.833 0-.833.834-.833h1.666c.834 0 .834 0 .834.833zM18.042 9.167a13.736 13.736 0 01-6.375 2.516M2.183 9.392a13.57 13.57 0 006.15 2.3"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                name="occupation"
+                id="occupation"
+                placeholder="Type your occupation"
+                class="input"
+                type="text"
+              />
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="input-container">
+            <label for="email" class="label">Email Address</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.167 17.083H5.833c-2.5 0-4.166-1.25-4.166-4.166V7.083c0-2.916 1.666-4.166 4.166-4.166h8.334c2.5 0 4.166 1.25 4.166 4.166v5.834c0 2.916-1.666 4.166-4.166 4.166z"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14.167 7.5l-2.609 2.083c-.858.684-2.266.684-3.125 0L5.833 7.5"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                name="email"
+                id="email"
+                placeholder="Type your valid email address"
+                class="input"
+                type="email"
+              />
+            </div>
+          </div>
+          <!-- Password -->
+          <div class="input-container">
+            <label for="password" class="label">Password</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.742 1.858L4.583 3.425c-.958.358-1.741 1.492-1.741 2.508v6.192c0 .983.65 2.275 1.441 2.867l3.584 2.675c1.175.883 3.108.883 4.283 0l3.583-2.675c.792-.592 1.442-1.884 1.442-2.867V5.933c0-1.025-.783-2.158-1.742-2.516l-4.158-1.559c-.708-.258-1.842-.258-2.533 0z"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 10.417a1.667 1.667 0 100-3.334 1.667 1.667 0 000 3.334zM10 10.417v2.5"
+                  stroke="#0A0723"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                name="password"
+                id="password"
+                placeholder="Type your password"
+                class="input peer"
+                type="password"
+                minlength="8"
+              />
+              <span class="hidden text-sm text-rose-500 peer-invalid:block">
+                At least 8 characters!
+              </span>
+            </div>
+          </div>
+          <!-- Confirm Password -->
+          <div class="input-container">
+            <label for="confirm_password" class="label">Confirm Password</label>
+            <div class="input-wrapper">
+              <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.742 1.858L4.583 3.425c-.958.358-1.741 1.492-1.741 2.508v6.192c0 .983.65 2.275 1.441 2.867l3.584 2.675c1.175.883 3.108.883 4.283 0l3.583-2.675c.792-.592 1.442-1.884 1.442-2.867V5.933c0-1.025-.783-2.158-1.742-2.516l-4.158-1.559c-.708-.258-1.842-.258-2.533 0z"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 10.417a1.667 1.667 0 100-3.334 1.667 1.667 0 000 3.334zM10 10.417v2.5"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                name="confirm_password"
+                id="confirm_password"
+                placeholder="Type your confirm password"
+                class="input peer"
+                type="password"
+                minlength="8"
+              />
+              <span class="hidden text-sm text-rose-500 peer-invalid:block">
+                At least 8 characters!
+              </span>
+            </div>
+          </div>
+
+          <button type="submit" class="button button-primary">Create My Account</button>
+        </form>
+      </section>
+      <figure class="h-full w-full bg-[url(assets/banner.jpg)] bg-cover bg-center" />
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
